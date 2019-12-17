@@ -1,4 +1,4 @@
-import { withRouter, RouterProps } from "next/router";
+import { withRouter, useRouter} from "next/router";
 
 export interface IProduct {
   id: string;
@@ -11,10 +11,10 @@ export interface IProduct {
 
 interface IProductProps {
   product: IProduct;
-  router: RouterProps;
 }
 
 const Product = (props: IProductProps) => {
+  const router = useRouter();
   return (
     <div className="product">
       <h2 className="product__title">{props.product.name}</h2>
@@ -27,7 +27,7 @@ const Product = (props: IProductProps) => {
           data-item-id={props.product.id}
           data-item-name={props.product.name}
           data-item-price={props.product.price}
-          data-item-url={props.router.pathname}
+          ata-item-url={router.pathname}
           data-item-image={props.product.image}
         >
           Add to cart
