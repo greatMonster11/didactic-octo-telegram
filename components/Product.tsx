@@ -27,7 +27,7 @@ const Product = (props: IProductProps) => {
           data-item-id={props.product.id}
           data-item-name={props.product.name}
           data-item-price={props.product.price}
-          ata-item-url={router.pathname}
+          data-item-url={router.pathname}
           data-item-image={props.product.image}
         >
           Add to cart
